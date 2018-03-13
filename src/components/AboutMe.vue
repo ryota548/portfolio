@@ -1,5 +1,8 @@
 <template>
+<div>
   <p>AboutMe</p>
+  <router-link to="/">to top</router-link>
+</div>
 </template>
 
 <script>

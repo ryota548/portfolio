@@ -2,6 +2,8 @@
 <div>
   <p>Hello World</p>
   <router-link to="/aboutme">about me</router-link>
+  <router-link to="/job">job</router-link>
+  <router-link to="/output">output</router-link>
 </div>
 </template>
 
