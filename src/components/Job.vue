@@ -1,13 +1,10 @@
 <template>
-<div>
-  <p>Hello World</p>
-  <router-link to="/aboutme">about me</router-link>
-</div>
+  <p>Job</p>
 </template>
 
 <script>
 export default {
-  name: 'Pages'
+  name: 'Job'
 }
 </script>
 
