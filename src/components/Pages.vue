@@ -24,6 +24,11 @@ export default {
   height: 100%;
   max-width: 200px;
   margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: greenyellow;
 }
 
@@ -32,13 +37,17 @@ title, .contents {
 }
 
 .title {
+  width: 200px;
+  height: 40px;
+
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
   background-color: red;
 }
 
 span {
-  width: 150px;
   color: white;
-  margin: auto;
 }
 
 .contents {

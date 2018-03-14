@@ -12,4 +12,8 @@ export default {
 
 <style>
 
+html, body, #app {
+  height: 100%;
+}
+
 </style>
