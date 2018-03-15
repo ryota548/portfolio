@@ -1,12 +1,14 @@
 <template>
 <div class="top">
   <div class="title">
-    <span>ryota koshiba</span>
+    <h2>ryota koshiba</h2>
   </div>
   <div class="contents">
-    <router-link to="/aboutme">about me</router-link>
-    <router-link to="/job">job</router-link>
-    <router-link to="/output">output</router-link>
+    <ul>
+      <li><router-link to="/aboutme">about me</router-link></li>
+      <li><router-link to="/job">job</router-link></li>
+      <li><router-link to="/output">output</router-link></li>
+    </ul>
   </div>
 </div>
 </template>
@@ -22,35 +24,55 @@ export default {
 
 .top {
   height: 100%;
-  max-width: 200px;
+  min-width: 0px;
   margin: auto;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: black;
+  color: white;
 
-  background-color: greenyellow;
-}
-
-title, .contents {
-  width: 100%;
+  font-family: 'Courier New', Courier, Monaco;
 }
 
 .title {
-  width: 200px;
-  height: 40px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40%;
+}
 
-  display: table-cell;
+h2 {
+  position: absolute;
   text-align: center;
   vertical-align: middle;
+  bottom: 0px;
+  margin: 0 auto;
+  width: 200px;
+  height: 40px;
+  color: white;
+
   background-color: red;
 }
 
-span {
-  color: white;
+.contents {
+  display: block;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.contents {
+ul {
+  margin: 0 auto;
+  text-align: left;
+  width: 200px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+
 }
 
 </style>
