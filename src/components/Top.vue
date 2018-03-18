@@ -1,17 +1,9 @@
 <template>
 <div class="top">
-    <div class="top__header">
-      <div class="top__header__logo">ryota koshiba</div>
-    </div>
-    <div class="top__aboutme">
-      <router-link to="/aboutme">about me</router-link>
-    </div>
-    <div class="top__job">
-      <router-link to="/job">job</router-link>
-    </div>
-    <div class="top__output">
-      <router-link to="/output">output</router-link>
-    </div>
+    <router-link to="/" class="top__logo">ryota koshiba</router-link>
+    <router-link to="/aboutme" class="top__aboutme">about me</router-link>
+    <router-link to="/job" class="top__job">job</router-link>
+    <router-link to="/output" class="top__output">output</router-link>
 </div>
 </template>
 
@@ -30,25 +22,17 @@ export default {
 
   display: grid;
   grid-template-rows: 45px 1fr; 
-  grid-template-columns: 33% 33% 1fr; 
+  grid-template-columns: 33% 33% 1fr;
+  box-sizing: border-box;
+  grid-gap:5px;
 
   text-align: center;
   vertical-align: middle;
 
-  &__header {
+  &__logo {
     grid-row: 1;
-    grid-column: 1 / 4;    
+    grid-column: 2;    
     background-color: lightpink;
-
-    display: grid;
-    grid-template-rows: 45px 1fr; grid-template-columns: 33% 33% 1fr; 
-    grid-template-areas: 
-      ". logo .";
-
-    &__logo {
-      grid-area: logo;
-      background-color: lightseagreen;
-    }
   }
 
   &__aboutme {
