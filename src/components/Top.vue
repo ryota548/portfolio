@@ -24,6 +24,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+@font-face {
+  font-family: 'zurich';
+  src: url(../assets/zurich.ttf);
+}
 $header-height: 45px;
 
 .top {
@@ -59,9 +63,9 @@ $header-height: 45px;
     border-right: 1px solid black;  
     
     &__text {
-      font-size: 16px;
+      font-size: 22px;
+      font-family: zurich;
       font-weight: bold;
-      font-family: Gotham;
     }
   }
 
