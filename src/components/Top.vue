@@ -1,11 +1,17 @@
 <template>
 <div class="top">
     <router-link to="/" class="top-block top__logo">
-      <h1 class="top__logo__text">Ryota Koshiba</h1>
+      <h1 class="top__logo__text">RYOTA KOSHIBA</h1>
     </router-link>
-    <router-link to="/aboutme" class="top-block top__aboutme">about me</router-link>
-    <router-link to="/job" class="top-block top__job">job</router-link>
-    <router-link to="/output" class="top-block top__output">output</router-link>
+    <router-link to="/job" class="top-block top__job">
+      <h1 class="top__job__text">JOB</h1>
+    </router-link>
+    <router-link to="/aboutme" class="top-block top__aboutme">
+      <h1 class="top__aboutme__text">ABOUT ME</h1>
+    </router-link>
+    <router-link to="/output" class="top-block top__output">
+      <h1 class="top__output__text">OUTPUT</h1>
+    </router-link>
 </div>
 </template>
 
@@ -18,52 +24,78 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 
+$header-height: 45px;
+
 .top {
   width: 100%;
   height: 100%;
 
   display: grid;
-  grid-template-rows: 45px 1fr; 
-  grid-template-columns: 33% 33% 1fr;
+  grid-template-rows: $header-height 1fr; 
+  grid-template-columns: 33% 1fr 33%;
+  box-sizing: border-box;
+
+  text-align: center;
   
   &-block {
     color: black;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-
-    text-align: center;
-    vertical-align: middle;
     text-decoration: none;
+    box-sizing: border-box;
+
+    font-family: Gotham Medium;
   }
 
   &__logo {
     grid-row: 1;
-    grid-column: 2;    
-    background-color: red;
+    grid-column: 2;
+    border-left: 1px solid black;
+    border-right: 1px solid black;  
+    
+    &__text {
+      font-size: 20px;
+
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__job {
+    grid-row: 2;
+    grid-column: 1;
+    border-top: 1px solid black;
 
     &__text {
-      font-size: 34px;
-      font-style: italic;
-      line-height: 45px;
-      color: white;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
   &__aboutme {
     grid-row: 2;
-    grid-column: 1;
-    background-color: lightgoldenrodyellow;
-  }
-
-  &__job {
-    grid-row: 2;
     grid-column: 2;
-    background-color: lightgreen;
+    border-top: 1px solid black;    
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+
+    &__text {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__output {
     grid-row: 2;
     grid-column: 3;
-    background-color: lightcoral;
+    border-top: 1px solid black;
+
+    &__text {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
 
