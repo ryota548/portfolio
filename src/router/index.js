@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Top from '@/components/Top.vue'
+import Contents from '@/components/Contents.vue'
 import AboutMe from '@/components/AboutMe.vue'
 import Job from '@/components/Job.vue'
 import Output from '@/components/Output.vue'
@@ -11,8 +11,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Top',
-      component: Top
+      name: 'Contents',
+      component: Contents
     },
     {
       path: '/aboutme',
