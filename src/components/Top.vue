@@ -1,9 +1,11 @@
 <template>
 <div class="top">
-    <router-link to="/" class="top__logo">ryota koshiba</router-link>
-    <router-link to="/aboutme" class="top__aboutme">about me</router-link>
-    <router-link to="/job" class="top__job">job</router-link>
-    <router-link to="/output" class="top__output">output</router-link>
+    <router-link to="/" class="top-block top__logo">
+      <h1 class="top__logo__text">Ryota Koshiba</h1>
+    </router-link>
+    <router-link to="/aboutme" class="top-block top__aboutme">about me</router-link>
+    <router-link to="/job" class="top-block top__job">job</router-link>
+    <router-link to="/output" class="top-block top__output">output</router-link>
 </div>
 </template>
 
@@ -23,28 +25,39 @@ export default {
   display: grid;
   grid-template-rows: 45px 1fr; 
   grid-template-columns: 33% 33% 1fr;
-  box-sizing: border-box;
-  grid-gap:5px;
+  
+  &-block {
+    color: black;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 
-  text-align: center;
-  vertical-align: middle;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+  }
 
   &__logo {
     grid-row: 1;
     grid-column: 2;    
-    background-color: lightpink;
+    background-color: red;
+
+    &__text {
+      font-size: 34px;
+      font-style: italic;
+      line-height: 45px;
+      color: white;
+    }
   }
 
   &__aboutme {
     grid-row: 2;
     grid-column: 1;
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
   }
 
   &__job {
     grid-row: 2;
     grid-column: 2;
-    background-color: lightgoldenrodyellow;
+    background-color: lightgreen;
   }
 
   &__output {
