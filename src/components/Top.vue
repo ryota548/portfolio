@@ -1,9 +1,15 @@
 <template>
 <div class="top">
-    <h2 class="top__header">ryota koshiba</h2>
-    <router-link class="top__contents__aboutme" to="/aboutme">about me</router-link>
-    <router-link class="top__contents__job" to="/job">job</router-link>
-    <router-link class="top__contents__output" to="/output">output</router-link>
+    <div class="top__header"></div>
+    <div class="top__aboutme">
+      <router-link to="/aboutme">about me</router-link>
+    </div>
+    <div class="top__job">
+      <router-link to="/job">job</router-link>
+    </div>
+    <div class="top__output">
+      <router-link to="/output">output</router-link>
+    </div>
 </div>
 </template>
 
@@ -17,14 +23,13 @@ export default {
 <style lang="scss" scoped>
 
 .top {
-  width: 80%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
 
   display: grid;
-  grid-template-rows: 50% 1fr;
+  grid-template-rows: 45px 1fr;
   grid-template-columns: 33% 33% 1fr;
-  grid-gap: 10px;
 
   &__header {
     grid-row: 1;
@@ -32,10 +37,7 @@ export default {
     background-color: lightpink;
   }
 
-  &__contents {
-
-    border-radius: 5px;
-      &__aboutme {
+  &__aboutme {
     grid-row: 2;
     grid-column: 1;
     background-color: lightblue;
@@ -51,7 +53,6 @@ export default {
     grid-row: 2;
     grid-column: 3;
     background-color: lightcoral;
-  }
   }
 }
 
