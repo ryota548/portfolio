@@ -1,16 +1,16 @@
 <template>
 <div class="top">
     <router-link to="/" class="top-block top__logo">
-      <h1 class="top__logo__text">RYOTA KOSHIBA</h1>
+      <h1 class="top-block__text top__logo__text">RYOTA KOSHIBA</h1>
     </router-link>
     <router-link to="/job" class="top-block top__job">
-      <h1 class="top__job__text">JOB</h1>
+      <h1 class="top-block__text">JOB</h1>
     </router-link>
     <router-link to="/aboutme" class="top-block top__aboutme">
-      <h1 class="top__aboutme__text">ABOUT ME</h1>
+      <h1 class="top-block__text">ABOUT ME</h1>
     </router-link>
     <router-link to="/output" class="top-block top__output">
-      <h1 class="top__output__text">OUTPUT</h1>
+      <h1 class="top-block__text">OUTPUT</h1>
     </router-link>
 </div>
 </template>
@@ -44,6 +44,12 @@ $header-height: 45px;
     color: black;
     text-decoration: none;
     box-sizing: border-box;
+
+    &__text {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   &__logo {
@@ -53,13 +59,9 @@ $header-height: 45px;
     border-right: 1px solid black;  
     
     &__text {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: bold;
       font-family: Gotham;
-
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 
@@ -67,12 +69,6 @@ $header-height: 45px;
     grid-row: 2;
     grid-column: 1;
     border-top: 1px solid black;
-
-    &__text {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
 
   &__aboutme {
@@ -81,24 +77,12 @@ $header-height: 45px;
     border-top: 1px solid black;    
     border-right: 1px solid black;
     border-left: 1px solid black;
-
-    &__text {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
 
   &__output {
     grid-row: 2;
     grid-column: 3;
     border-top: 1px solid black;
-
-    &__text {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
 }
 
