@@ -1,6 +1,8 @@
 <template>
 <div class="top">
-    <div class="top__header"></div>
+    <div class="top__header">
+      <div class="top__header__logo">ryota koshiba</div>
+    </div>
     <div class="top__aboutme">
       <router-link to="/aboutme">about me</router-link>
     </div>
@@ -25,16 +27,28 @@ export default {
 .top {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
 
   display: grid;
-  grid-template-rows: 45px 1fr;
-  grid-template-columns: 33% 33% 1fr;
+  grid-template-rows: 45px 1fr; 
+  grid-template-columns: 33% 33% 1fr; 
+
+  text-align: center;
+  vertical-align: middle;
 
   &__header {
     grid-row: 1;
-    grid-column: 1 / 4;
+    grid-column: 1 / 4;    
     background-color: lightpink;
+
+    display: grid;
+    grid-template-rows: 45px 1fr; grid-template-columns: 33% 33% 1fr; 
+    grid-template-areas: 
+      ". logo .";
+
+    &__logo {
+      grid-area: logo;
+      background-color: lightseagreen;
+    }
   }
 
   &__aboutme {
