@@ -36,13 +36,14 @@ $header-height: 45px;
   box-sizing: border-box;
 
   text-align: center;
+  font-size: 12px;
+  font-family: Arial,Helvetica,sans-serif;
+  letter-spacing: .05em;
   
   &-block {
     color: black;
     text-decoration: none;
     box-sizing: border-box;
-
-    font-family: Gotham Medium;
   }
 
   &__logo {
@@ -53,6 +54,8 @@ $header-height: 45px;
     
     &__text {
       font-size: 20px;
+      font-weight: bold;
+      font-family: Gotham;
 
       position: relative;
       top: 50%;
