@@ -1,9 +1,8 @@
 <template>
 <div class="aboutme">
-    <router-link to="/" class="top__logo">ryota koshiba</router-link>
-    <p class="aboutme__block">dmm.com</p>
-    <p class="aboutme__block">naist</p>
-    <p class="aboutme__block">doshisha</p>
+    <p class="aboutme__block">DMM.com</p>
+    <p class="aboutme__block">NAIST</p>
+    <p class="aboutme__block">DOSHISHA</p>
 </div>
 </template>
 
@@ -21,16 +20,14 @@ export default {
   height: 100%;
 
   display: grid;
-  grid-template-rows: 45px 1fr; 
-  grid-template-columns: 33% 33% 1fr;
+  grid-template-columns: 33% 1fr 33%;
   box-sizing: border-box;
-  grid-gap:5px;
 
   text-align: center;
   vertical-align: middle;
 
   &__block {  
-    background-color: lightpink;
+    border-left: 1px solid black;
   }
 }
 
