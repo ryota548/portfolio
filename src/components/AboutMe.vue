@@ -1,14 +1,31 @@
 <template>
 <div class="aboutme">
-    <p class="aboutme__block">DMM.com</p>
-    <p class="aboutme__block">NAIST</p>
-    <p class="aboutme__block">DOSHISHA</p>
+  <item-link v-for="item in linkJson" :key=item.id :toLink=item.toLink :title=item.title></item-link>
 </div>
 </template>
 
 <script>
+import ItemLink from '@/components/ItemLink.vue'
 export default {
-  name: 'AboutMe'
+  name: 'AboutMe',
+  components: {
+    'item-link': ItemLink
+  },
+  data: function () {
+    return {
+      linkJson:
+      [
+        {
+          'toLink': '/aboutme',
+          'title': 'DMM.com'
+        },
+        {
+          'toLink': '/aboutme',
+          'title': 'Doshisha'
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -19,7 +36,7 @@ export default {
   width: 100%;
 
   display: grid;
-  grid: auto-flow minmax(25%, 50%) / repeat(3, 1fr);
+  grid: auto-flow minmax(25%, 100%) / repeat(3, 1fr);
   
   box-sizing: border-box;
 
