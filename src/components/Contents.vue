@@ -27,6 +27,11 @@ export default {
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+}
+
+.item-link {
+  background-color: white;
 }
 
 </style>

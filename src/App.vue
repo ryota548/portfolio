@@ -31,6 +31,7 @@ $header-height: 45px;
   width: 100%;
   height: 100%;
   display: grid;
+  background-color: black;
   grid-template-rows: $header-height 1fr;
   grid-template-columns: repeat(3, 1fr);
   box-sizing: border-box;
@@ -46,6 +47,7 @@ $header-height: 45px;
     border-left: 1px solid black;
     border-right: 1px solid black;  
     text-decoration: none;
+    background-color: white;
     color: black;
     
     &__logo {

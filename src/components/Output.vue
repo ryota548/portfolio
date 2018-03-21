@@ -24,8 +24,14 @@ export default {
 <style scoped>
 .output {
   width: 100%;
-
+  
   display: grid;
   grid: auto-flow minmax(25%, 100%) / repeat(3, 1fr);
+  grid-gap: 1px;
+}
+
+.item-link {
+  background-color: white;
+  /* border-left: 1px solid black; */
 }
 </style>
