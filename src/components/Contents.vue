@@ -24,7 +24,7 @@ export default {
 .contents {
 
   display: grid;
-  grid-template-columns: 33% 1fr 33%;
+  grid-template-columns: repeat(3, 1fr);
   
   &-block {
     box-sizing: border-box;

@@ -32,7 +32,7 @@ $header-height: 45px;
   height: 100%;
   display: grid;
   grid-template-rows: $header-height 1fr;
-  grid-template-columns: 33% 1fr 33%;
+  grid-template-columns: repeat(3, 1fr);
   box-sizing: border-box;
 
   text-align: center;

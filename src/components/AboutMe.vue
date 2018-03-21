@@ -17,17 +17,15 @@ export default {
 
 .aboutme {
   width: 100%;
-  height: 100%;
 
   display: grid;
-  grid-template-columns: 33% 1fr 33%;
+  grid: auto-flow minmax(25%, 50%) / repeat(3, 1fr);
+  
   box-sizing: border-box;
-
-  text-align: center;
-  vertical-align: middle;
 
   &__block {  
     border-left: 1px solid black;
+    border-bottom: 1px solid black;
   }
 }
 
