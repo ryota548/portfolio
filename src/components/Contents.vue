@@ -6,6 +6,7 @@
 
 <script>
 import ItemLink from '@/components/ItemLink.vue'
+import contents from '@/data/contents.json'
 export default {
   name: 'Contents',
   components: {
@@ -13,21 +14,7 @@ export default {
   },
   data: function () {
     return {
-      linkJson:
-      [
-        {
-          'toLink': '/job',
-          'title': 'JOB'
-        },
-        {
-          'toLink': '/aboutme',
-          'title': 'ABOUT ME'
-        },
-        {
-          'toLink': '/output',
-          'title': 'OUTPUT'
-        }
-      ]
+      linkJson: contents
     }
   }
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "toLink": "/job",
+    "title": "JOB"
+  },
+  {
+    "toLink": "/aboutme",
+    "title": "ABOUT ME"
+  },
+  {
+    "toLink": "/output",
+    "title": "OUTPUT"
+  }
+]

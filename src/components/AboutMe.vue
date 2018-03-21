@@ -6,6 +6,7 @@
 
 <script>
 import ItemLink from '@/components/ItemLink.vue'
+import aboutme from '@/data/aboutme.json'
 export default {
   name: 'AboutMe',
   components: {
@@ -13,17 +14,7 @@ export default {
   },
   data: function () {
     return {
-      linkJson:
-      [
-        {
-          'toLink': '/aboutme',
-          'title': 'DMM.com'
-        },
-        {
-          'toLink': '/aboutme',
-          'title': 'Doshisha'
-        }
-      ]
+      linkJson: aboutme
     }
   }
 }
@@ -37,13 +28,6 @@ export default {
 
   display: grid;
   grid: auto-flow minmax(25%, 100%) / repeat(3, 1fr);
-  
-  box-sizing: border-box;
-
-  &__block {  
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-  }
 }
 
 </style>
