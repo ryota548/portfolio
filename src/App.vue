@@ -1,17 +1,25 @@
 <template>
   <div id="app">
   <div class="top">
-    <router-link to="/" class="top__header">
-      <h1 class="top__header__logo">RYOTA KOSHIBA</h1>
-    </router-link>
+    <item-link v-for="item in linkJson" class="top__header" :key=item.id :toLink=item.toLink :title=item.title></item-link>
     <router-view class="top__contents"></router-view>
   </div>
   </div>
 </template>
 
 <script>
+import ItemLink from '@/components/ItemLink.vue'
+import header from '@/data/header.json'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    'item-link': ItemLink
+  },
+  data: function () {
+    return {
+      linkJson: header
+    }
+  }
 }
 </script>
 
@@ -34,23 +42,19 @@ $header-height: 45px;
   background-color: black;
   grid-template-rows: $header-height 1fr;
   grid-template-columns: repeat(3, 1fr);
-  box-sizing: border-box;
+  grid-gap: 1px;
 
   text-align: center;
   font-size: 12px;
   font-family: Arial,Helvetica,sans-serif;
   letter-spacing: .05em;
 
-  &__header {
-    grid-row: 1;
-    grid-column: 2;
-    border-left: 1px solid black;
-    border-right: 1px solid black;  
+  &__header.item-link { 
     text-decoration: none;
     background-color: white;
     color: black;
     
-    &__logo {
+    .item-link__text {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -65,7 +69,6 @@ $header-height: 45px;
   &__contents {
     grid-row: 2;
     grid-column: 1 / 4;
-    border-top: 1px solid black;
   }
 }
 </style>
