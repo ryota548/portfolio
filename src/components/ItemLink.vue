@@ -1,7 +1,10 @@
 <template>
-<router-link :to="toLink" class="item-link">
-  <h1 class="item-link__text">{{ title }}</h1>
-</router-link>
+  <router-link 
+    :to="toLink" 
+    class="item-link"
+  >
+    <h1 class="item-link__text">{{ title }}</h1>
+  </router-link>
 </template>
 
 <script>

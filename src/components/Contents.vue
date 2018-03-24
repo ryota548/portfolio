@@ -1,6 +1,12 @@
 <template>
 <div class="contents">
-  <item-link v-for="item in linkJson" :key=item.id :toLink=item.toLink :title=item.title></item-link>
+  <item-link 
+    v-for="item in linkJson" 
+    :key=item.id 
+    :toLink=item.toLink 
+    :title=item.title
+  >
+  </item-link>
 </div>
 </template>
 

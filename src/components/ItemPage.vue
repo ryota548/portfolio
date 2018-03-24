@@ -1,6 +1,13 @@
 <template>
 <div class="item-page">
-  <item-info v-for="item in itemJson" :key=item.id :thumbnail=item.thumbnail :title=item.title :tag=item.tag></item-info>
+  <item-info 
+    v-for="item in itemJson" 
+    :key=item.id 
+    :thumbnail=item.thumbnail 
+    :title=item.title 
+    :tag=item.tag
+  >
+  </item-info>
 </div>
 </template>
 

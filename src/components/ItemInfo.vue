@@ -4,7 +4,10 @@
       <h1 class="item-info__title">{{ title }}</h1>
     </div>
     <div>
-      <img class="item-info__image" :src="thumbnail">
+      <img 
+        class="item-info__image" 
+        :src="thumbnail"
+      >
     </div>
     <div>
       <p>{{ tag }}</p>

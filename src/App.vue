@@ -1,7 +1,14 @@
 <template>
   <div id="app">
   <div class="top">
-    <item-link v-for="item in linkJson" class="top__header" :key=item.id :toLink=item.toLink :title=item.title></item-link>
+    <item-link 
+      v-for="item in linkJson" 
+      class="top__header" 
+      :key=item.id 
+      :toLink=item.toLink 
+      :title=item.title
+    >
+    </item-link>
     <router-view class="top__contents"></router-view>
   </div>
   </div>
