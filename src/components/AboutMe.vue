@@ -1,16 +1,16 @@
 <template>
 <div class="aboutme">
-  <item-link v-for="item in linkJson" :key=item.id :toLink=item.toLink :title=item.title></item-link>
+  <item-info v-for="item in linkJson" :key=item.id :thumbnail=item.thumbnail :title=item.title :tag=item.tag></item-info>
 </div>
 </template>
 
 <script>
-import ItemLink from '@/components/ItemLink.vue'
+import ItemInfo from '@/components/ItemInfo.vue'
 import aboutme from '@/data/aboutme.json'
 export default {
   name: 'AboutMe',
   components: {
-    'item-link': ItemLink
+    'item-info': ItemInfo
   },
   data: function () {
     return {
@@ -27,11 +27,11 @@ export default {
   width: 100%;
 
   display: grid;
-  grid: auto-flow minmax(25%, 100%) / repeat(3, 1fr);
+  grid: auto-flow minmax(320px, 100%) / repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1px;
 }
 
-.item-link {
+.item-info {
   background-color: white;
 }
 

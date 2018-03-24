@@ -11,7 +11,7 @@ export default {
     toLink: {
       required: true,
       type: String,
-      default: '/top'
+      default: '/'
     },
     title: {
       required: true,
