@@ -1,16 +1,16 @@
 <template>
 <div class="job">
-  <item-link v-for="item in linkJson" :key=item.id :toLink=item.toLink :title=item.title></item-link>
+  <item-page :itemJson=linkJson></item-page>
 </div>
 </template>
 
 <script>
-import ItemLink from '@/components/ItemLink.vue'
+import ItemPage from '@/components/ItemPage.vue'
 import job from '@/data/job.json'
 export default {
   name: 'Job',
   components: {
-    'item-link': ItemLink
+    'item-page': ItemPage
   },
   data: function () {
     return {
@@ -22,17 +22,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.job {
-  width: 100%;
-
-  display: grid;
-  grid: auto-flow minmax(25%, 100%) / repeat(3, 1fr);
-  grid-gap: 1px;
-}
-
-.item-link {
-  background-color: white; 
-}
 
 </style>
