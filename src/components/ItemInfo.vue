@@ -48,7 +48,7 @@ export default {
   color: black;
 
   display: grid;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 15% 70% 15%;
 
   &__image {
     max-width: 70%; 

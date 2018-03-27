@@ -31,9 +31,7 @@ export default {
 <style lang="scss" scoped>
 
 .item-page {
-  width: 100%;
   height: 100%;
-
   display: grid;
   grid: auto-flow minmax(320px, 100%) / repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1px;

@@ -30,7 +30,7 @@ export default {
 <style lang="scss" scoped>
 
 .contents {
-
+  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1px;
