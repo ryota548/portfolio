@@ -1,6 +1,7 @@
 <template>
   <div id="app">
   <div class="top">
+    <div style="background: white"></div>
     <item-link 
       v-for="item in linkJson" 
       class="top__header" 
@@ -9,6 +10,7 @@
       :title=item.title
     >
     </item-link>
+    <div style="background: white"></div>
     <router-view class="top__contents"></router-view>
   </div>
   </div>
