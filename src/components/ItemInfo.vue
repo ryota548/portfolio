@@ -6,8 +6,10 @@
     <div>
       <img 
         class="item-info__image" 
-        :src="thumbnail"
-      >
+        :src="thumbnail" >
+    </div>
+    <div>
+      <p>{{ description }}</p>
     </div>
     <div>
       <p>{{ tag }}</p>
@@ -48,7 +50,7 @@ export default {
   color: black;
 
   display: grid;
-  grid-template-rows: 15% 70% 15%;
+  grid-template-rows: 10% 60% 20% 10%;
 
   &__image {
     max-width: 70%; 

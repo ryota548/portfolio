@@ -5,6 +5,7 @@
     :key=item.id 
     :thumbnail=item.thumbnail 
     :title=item.title 
+    :description=item.description
     :tag=item.tag
   >
   </item-info>
