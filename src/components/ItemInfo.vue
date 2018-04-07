@@ -9,7 +9,7 @@
         :src="thumbnail" >
     </div>
     <div>
-      <p>{{ description }}</p>
+      <p v-for="sentens in description" :key="sentens.id">{{ sentens }}</p>
     </div>
     <div>
       <p>{{ tag }}</p>
@@ -30,7 +30,7 @@ export default {
       required: true
     },
     description: {
-      type: String,
+      type: Array,
       required: true
     },
     tag: {
@@ -50,7 +50,7 @@ export default {
   color: black;
 
   display: grid;
-  grid-template-rows: 10% 60% 20% 10%;
+  grid-template-rows: 15% 50% 20% 15%;
 
   &__image {
     max-width: 70%; 

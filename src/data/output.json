@@ -3,35 +3,45 @@
     "toLink": "/",
     "thumbnail": "../assets/group_detection.png",
     "title": "Web Engeneer Hiring Video",
-    "description": "My company's video",
+    "description": [
+      "My company's video"
+    ],
     "tag": "presentation, job"
   },
   {
     "toLink": "/",
     "thumbnail": "../assets/group_detection.png",
     "title": "RYOTA KOSHIBA",
-    "description": "This is my homepage",
+    "description": [
+      "This is my homepage"
+    ],
     "tag": "Coding, Hobby, Vue.js, HTML, CSS"
   },
   {
     "toLink": "/",
     "thumbnail": "../assets/group_detection.png",
     "title": "寿司は左から食え",
-    "description": "This is my weblog",
+    "description": [
+      "This is my weblog"
+    ],
     "tag": "Writing, Hooby"
   },
   {
     "toLink": "/",
     "thumbnail": "../assets/group_detection.png",
     "title": "Group Detection",
-    "description": "This is my study with sensing of Android app",
+    "description": [
+      "This is my study with sensing of Android app"
+    ],
     "tag": "presentation, Writing, Coding, Java, Firebase, mobile sensing"
   },
   {
     "toLink": "/",
     "thumbnail": "../assets/group_detection.png",
     "title": "三題噺",
-    "description": "This is iOS application",
+    "description": [
+      "This is iOS application"
+    ],
     "tag": "Coding, Hobby, Objective-C"
   }
 ]

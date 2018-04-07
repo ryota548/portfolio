@@ -3,42 +3,67 @@
     "toLink": "/",
     "thumbnail": "http://sweeprecord.com/wp-content/uploads/efdea4d1ce25b16c641d5b0b390b6642.png",
     "title": "4.2018 ~ Now",
-    "description": "Webapplication Engineer",
-    "tag": "now, job"
+    "description": [
+      "Webapplication Engineer",
+      "video streaming department"
+    ],
+    "tag": "now, employee"
   },
   {
     "toLink": "/",
     "thumbnail": "https://www.asahicom.jp/articles/images/AS20170622004426_commL.jpg",
     "title": "3.2018 ~ Now",
-    "description": "live in",
-    "tag": "now, live in"
+    "description": [
+      "live in"
+    ],
+    "tag": "now, citizen"
   },
   {
     "toLink": "/",
     "thumbnail": "http://www.naist.jp/about/img/logomark_R.jpg",
     "title": "4.2015 ~ 3.2017",
-    "description": "Infomation Technorogy",
+    "description": [
+      "Ubiquitous Computing Systems Lab.",
+      "Division of Infomation Science"
+    ],
     "tag": "past, student"
+  },
+  {
+    "toLink": "/",
+    "thumbnail": "https://stat.ameba.jp/user_images/20160703/23/ryos0813/60/5d/p/o0800023313688630645.png?caw=800",
+    "title": "5.2014 ~ 3.2017",
+    "description": [
+      "Mentor",
+      "programming education for students"
+    ],
+    "tag": "past, part-time job"
   },
   {
     "toLink": "/",
     "thumbnail": "http://154450.com/doushisya/images/dlogo.jpg",
     "title": "4.2011 ~ 3.2015",
-    "description": "Electric Engeneering",
+    "description": [
+      "Ultrasonic Electronics Lab.",
+      "Faculty of Science and Engineering"
+    ],
     "tag": "past, student"
   },
   {
     "toLink": "/",
     "thumbnail": "http://uenomiya.com/wp-content/uploads/2017/07/ug_logo_new-300x50.png",
     "title": "4.2008 ~ 3.2011",
-    "description": "High School Student",
+    "description": [
+      "High School Student"
+    ],
     "tag": "past, student"
   },
   {
     "toLink": "/",
     "thumbnail": "https://www.city.higashiosaka.lg.jp/cmsfiles/contents/0000014/14043/ragbynomachi_blue(1024-768).png",
     "title": "8.1992 ~ 3.2017",
-    "description": "lived in",
-    "tag": "past, livein"
+    "description": [
+      "my home town"
+    ],
+    "tag": "past, citizen"
   }
 ]
