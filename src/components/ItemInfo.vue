@@ -6,8 +6,12 @@
     <img
       class="item-info__image" 
       :src="thumbnail">
-    <div class="item-info_description">
-      <span @click="back"><</span>
+    <div class="item-info__description">
+      <span
+        :class="[this.page==0 ? 'item-info--hidden' : '']"
+        @click="back">
+        <
+      </span>
       <p 
         v-for="(sentens, index) in description"
         v-if="index==page"
@@ -15,9 +19,13 @@
         @touchstart="onTouchStart">
         {{ sentens }}
       </p>
-      <span @click="next">></span>
+      <span 
+        v-if="this.page!=this.description.length-1"
+        @click="next">
+        >
+      </span>
     </div>
-    <div class="item-info_tag">
+    <div class="item-info__tag">
       <p>{{ tag }}</p>
     </div>
   </div>
@@ -73,10 +81,14 @@ export default {
       return e.changedTouches ? e.changedTouches[0]['pageX'] : e['pageX']
     },
     back () {
-      this.page--
+      if (this.page > 0) {
+        this.page--
+      }
     },
     next () {
-      this.page++
+      if (this.page < this.description.length - 1) {
+        this.page++
+      }
     }
   }
 }
@@ -104,10 +116,15 @@ export default {
     font-size: 18px;
   }
 
-  &_description {
+  &__description {
+    width: 100%;
     display: grid;
     grid-template-columns: 35px 1fr 35px;
     align-items: center;
+  }
+
+  &--hidden {
+    visibility: hidden;
   }
 }
 
