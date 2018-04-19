@@ -6,8 +6,7 @@
     :thumbnail=item.thumbnail 
     :title=item.title 
     :description=item.description
-    :tag=item.tag
-  >
+    :tag=item.tag>
   </item-info>
 </div>
 </template>

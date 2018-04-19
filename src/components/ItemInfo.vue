@@ -3,15 +3,21 @@
     <div>
       <h1 class="item-info__title">{{ title }}</h1>
     </div>
-    <div>
-      <img 
-        class="item-info__image" 
-        :src="thumbnail" >
+    <img
+      class="item-info__image" 
+      :src="thumbnail">
+    <div class="item-info_description">
+      <span @click="back"><</span>
+      <p 
+        v-for="(sentens, index) in description"
+        v-if="index==page"
+        :key="sentens.id"
+        @touchstart="onTouchStart">
+        {{ sentens }}
+      </p>
+      <span @click="next">></span>
     </div>
-    <div>
-      <p v-for="sentens in description" :key="sentens.id">{{ sentens }}</p>
-    </div>
-    <div>
+    <div class="item-info_tag">
       <p>{{ tag }}</p>
     </div>
   </div>
@@ -37,6 +43,41 @@ export default {
       type: String,
       required: true
     }
+  },
+  data: function () {
+    return {
+      page: '0',
+      startPosition: 'null',
+      delta: 0
+    }
+  },
+  methods: {
+    onTouchStart (e) {
+      this.startPosition = this.getTouchPos(e)
+      document.addEventListener('touchmove', this.onTouchMove)
+      document.addEventListener('touchend', this.onTouchEnd)
+    },
+    onTouchMove (e) {
+      this.delta = this.getTouchPos(e) - this.startPosition
+    },
+    onTouchEnd (e) {
+      if (this.delta < -100) {
+        this.next()
+      } else if (this.delta > 100) {
+        this.back()
+      }
+      document.removeEventListener('touchmove', this.onTouchMove)
+      document.removeEventListener('touchend', this.onTouchEnd)
+    },
+    getTouchPos (e) {
+      return e.changedTouches ? e.changedTouches[0]['pageX'] : e['pageX']
+    },
+    back () {
+      this.page--
+    },
+    next () {
+      this.page++
+    }
   }
 }
 </script>
@@ -51,28 +92,22 @@ export default {
 
   display: grid;
   grid-template-rows: 15% 50% 20% 15%;
+  justify-items: center;
+  align-items: center;
 
   &__image {
     max-width: 70%; 
     max-height: 85%;
-    margin: 0 auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   &__title {
     font-size: 18px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
-  p {
-    font-size: 18px;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  &_description {
+    display: grid;
+    grid-template-columns: 35px 1fr 35px;
+    align-items: center;
   }
 }
 
