@@ -16,7 +16,8 @@
         v-for="(sentens, index) in description"
         v-if="index==page"
         :key="sentens.id"
-        @touchstart="onTouchStart">
+        @touchstart="onTouchStart"
+        @mousedown="onTouchStart">
         {{ sentens }}
       </p>
       <span 
@@ -64,9 +65,13 @@ export default {
       this.startPosition = this.getTouchPos(e)
       document.addEventListener('touchmove', this.onTouchMove)
       document.addEventListener('touchend', this.onTouchEnd)
+      document.addEventListener('mousemove', this.onTouchMove)
+      document.addEventListener('mouseup', this.onTouchEnd)
     },
     onTouchMove (e) {
       this.delta = this.getTouchPos(e) - this.startPosition
+      this.setTransrate(this.startPosition + this.delta)
+      console.log(this.delta)
     },
     onTouchEnd (e) {
       if (this.delta < -100) {
@@ -76,9 +81,14 @@ export default {
       }
       document.removeEventListener('touchmove', this.onTouchMove)
       document.removeEventListener('touchend', this.onTouchEnd)
+      document.removeEventListener('mousemove', this.onTouchMove)
+      document.removeEventListener('moouseup', this.onTouchEnd)
     },
     getTouchPos (e) {
       return e.changedTouches ? e.changedTouches[0]['pageX'] : e['pageX']
+    },
+    setTransrate (value) {
+      this['translateX'] = value
     },
     back () {
       if (this.page > 0) {
@@ -109,7 +119,7 @@ export default {
 
   &__image {
     max-width: 70%; 
-    max-height: 85%;
+    max-height: 50%;
   }
 
   &__title {
@@ -118,6 +128,7 @@ export default {
 
   &__description {
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 35px 1fr 35px;
     align-items: center;
