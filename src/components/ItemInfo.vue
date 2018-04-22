@@ -9,24 +9,26 @@
     <div class="item-info__description">
       <span
         :class="[this.page==0 ? 'item-info--hidden' : '']"
+        class="item-info--btn"
         @click="back">
         <
       </span>
-      <div class="item-info--carousel">
-        <transition :name="transition_name">
-          <div
-            v-for="(sentens, index) in description"
-            v-if="index==page"
-            :key="index"
-            class="item-info__description__body"
-            @touchstart="onTouchStart"
-            @mousedown="onTouchStart">
-            {{ sentens }}
-          </div>
-        </transition>
+      <div 
+        :style="'width:' + description.length * 100 + '%; transform: translateX(' + translateX + 'px'"
+        class="item-info--carousel">
+        <div
+          v-for="(sentens, index) in description"
+          :key="index"
+          ref="carousel"
+          class="item-info__description__body"
+          @touchstart="onTouchStart"
+          @mousedown="onTouchStart">
+          {{ sentens }}
+        </div>
       </div>
       <span 
         v-if="this.page!=this.description.length-1"
+        class="item-info--btn"
         @click="next">
         >
       </span>
@@ -61,9 +63,15 @@ export default {
   data: function () {
     return {
       delta: 0,
-      page: '0',
+      itemWidth: 0,
+      page: 0,
       startPosition: 'null',
       transition_name: 'show-next'
+    }
+  },
+  computed: {
+    translateX: function () {
+      return -this.itemWidth * this.page + this.delta
     }
   },
   methods: {
@@ -76,8 +84,6 @@ export default {
     },
     onTouchMove (e) {
       this.delta = this.getTouchPos(e) - this.startPosition
-      this.setTransrate(this.startPosition + this.delta)
-      console.log(this.delta)
     },
     onTouchEnd (e) {
       if (this.delta < -100) {
@@ -93,21 +99,21 @@ export default {
     getTouchPos (e) {
       return e.changedTouches ? e.changedTouches[0]['pageX'] : e['pageX']
     },
-    setTransrate (value) {
-      this['translateX'] = value
-    },
     back () {
       if (this.page > 0) {
-        this.transition_name = 'show-prev'
-        this.page--
+        this.delta = 0
+        this.page -= 1
       }
     },
     next () {
       if (this.page < this.description.length - 1) {
-        this.transition_name = 'show-next'
-        this.page++
+        this.delta = 0
+        this.page += 1
       }
     }
+  },
+  mounted () {
+    this.itemWidth = this.$refs.carousel[0].clientWidth
   }
 }
 </script>
@@ -140,12 +146,12 @@ export default {
     display: grid;
     grid-template-columns: 35px 1fr 35px;
     align-items: center;
+    overflow: hidden;
 
     &__body {
       display: flex;
       justify-content:center; 
       align-items: center;
-      position: absolute;
       width: 100%;
       height: 100%;
     }
@@ -156,26 +162,12 @@ export default {
   }
 
   &--carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+    display: flex;
     height: 100%;
   }
-}
 
-.show-next-enter-active,
-.show-next-leave-active,
-.show-prev-enter-active, 
-.show-prev-leave-active {
-  transition: all .4s;
+  &--btn {
+    z-index: 1;
+  }
 }
-.show-next-enter, 
-.show-prev-leave-to {
-  transform: translateX(100%);
-}
-.show-next-leave-to, 
-.show-prev-enter {
-  transform: translateX(-100%);
-}
-
 </style>
