@@ -90,6 +90,8 @@ export default {
         this.next()
       } else if (this.delta > 100) {
         this.back()
+      } else {
+        this.revert()
       }
       document.removeEventListener('touchmove', this.onTouchMove)
       document.removeEventListener('touchend', this.onTouchEnd)
@@ -110,6 +112,9 @@ export default {
         this.delta = 0
         this.page += 1
       }
+    },
+    revert () {
+      this.delta = 0
     }
   },
   mounted () {
