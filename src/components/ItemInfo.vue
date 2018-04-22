@@ -12,14 +12,19 @@
         @click="back">
         <
       </span>
-      <p 
-        v-for="(sentens, index) in description"
-        v-if="index==page"
-        :key="sentens.id"
-        @touchstart="onTouchStart"
-        @mousedown="onTouchStart">
-        {{ sentens }}
-      </p>
+      <div class="item-info--carousel">
+        <transition :name="transition_name">
+          <div
+            v-for="(sentens, index) in description"
+            v-if="index==page"
+            :key="index"
+            class="item-info__description__body"
+            @touchstart="onTouchStart"
+            @mousedown="onTouchStart">
+            {{ sentens }}
+          </div>
+        </transition>
+      </div>
       <span 
         v-if="this.page!=this.description.length-1"
         @click="next">
@@ -55,9 +60,10 @@ export default {
   },
   data: function () {
     return {
+      delta: 0,
       page: '0',
       startPosition: 'null',
-      delta: 0
+      transition_name: 'show-next'
     }
   },
   methods: {
@@ -92,11 +98,13 @@ export default {
     },
     back () {
       if (this.page > 0) {
+        this.transition_name = 'show-prev'
         this.page--
       }
     },
     next () {
       if (this.page < this.description.length - 1) {
+        this.transition_name = 'show-next'
         this.page++
       }
     }
@@ -132,11 +140,42 @@ export default {
     display: grid;
     grid-template-columns: 35px 1fr 35px;
     align-items: center;
+
+    &__body {
+      display: flex;
+      justify-content:center; 
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &--hidden {
     visibility: hidden;
   }
+
+  &--carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.show-next-enter-active,
+.show-next-leave-active,
+.show-prev-enter-active, 
+.show-prev-leave-active {
+  transition: all .4s;
+}
+.show-next-enter, 
+.show-prev-leave-to {
+  transform: translateX(100%);
+}
+.show-next-leave-to, 
+.show-prev-enter {
+  transform: translateX(-100%);
 }
 
 </style>
