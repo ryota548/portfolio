@@ -13,19 +13,25 @@
         @click="back">
         <
       </span>
-      <div 
-        :style="'width:' + description.length * 100 + '%; transform: translateX(' + translateX + 'px'"
-        class="item-info--carousel">
-        <div
-          v-for="(sentens, index) in description"
-          :key="index"
-          ref="carousel"
-          class="item-info__description__body"
-          @touchstart="onTouchStart"
-          @mousedown="onTouchStart">
-          {{ sentens }}
+      <transition :name="animationName">
+        <div 
+          :style="{
+            'width': description.length * 100 + '%',
+            'transform': 'translateX(' + translateX + 'px)',
+            'transition-duration': transitionDuration + 'ms'
+            }"
+          class="item-info--carousel">
+          <div
+            v-for="(sentens, index) in description"
+            :key="index"
+            ref="carousel"
+            class="item-info__description__body"
+            @touchstart="onTouchStart"
+            @mousedown="onTouchStart">
+            {{ sentens }}
+          </div>
         </div>
-      </div>
+      </transition>
       <span 
         v-if="this.page!=this.description.length-1"
         class="item-info--btn"
@@ -62,11 +68,13 @@ export default {
   },
   data: function () {
     return {
+      animationName: 'next',
       delta: 0,
       itemWidth: 0,
       page: 0,
       startPosition: 'null',
-      transition_name: 'show-next'
+      transition_name: 'show-next',
+      transitionDuration: 0
     }
   },
   computed: {
@@ -77,6 +85,7 @@ export default {
   methods: {
     onTouchStart (e) {
       this.startPosition = this.getTouchPos(e)
+      this.transitionDuration = 0
       document.addEventListener('touchmove', this.onTouchMove)
       document.addEventListener('touchend', this.onTouchEnd)
       document.addEventListener('mousemove', this.onTouchMove)
@@ -86,6 +95,7 @@ export default {
       this.delta = this.getTouchPos(e) - this.startPosition
     },
     onTouchEnd (e) {
+      this.transitionDuration = 400
       if (this.delta < -100) {
         this.next()
       } else if (this.delta > 100) {
