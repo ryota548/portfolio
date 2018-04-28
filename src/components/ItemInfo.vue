@@ -83,7 +83,7 @@ export default {
       page: 0,
       startPosition: 'null',
       transition_name: 'show-next',
-      transitionDuration: 0
+      transitionDuration: 400
     }
   },
   computed: {

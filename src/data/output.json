@@ -10,7 +10,7 @@
   },
   {
     "url": "https://ryota548.github.io/portfolio/#/",
-    "thumbnail": "../assets/ryotakoshiba.png",
+    "thumbnail": "https://i.gyazo.com/94572da99f65d42218be3180a1ab91b4.png",
     "title": "RYOTA KOSHIBA",
     "description": [
       "This is my homepage"
@@ -19,7 +19,7 @@
   },
   {
     "url": "https://ieeexplore.ieee.org/document/7929695/",
-    "thumbnail": "../assets/group_detection.png",
+    "thumbnail": "https://i.gyazo.com/ebe7379e82558f9bb7b0f951cb71b6a7.png",
     "title": "Group Detection",
     "description": [
       "This is my study with sensing of Android app",
@@ -29,7 +29,7 @@
   },
   {
     "url": "#",
-    "thumbnail": "../assets/group_detection.png",
+    "thumbnail": "https://i.gyazo.com/060da51f749de8612b7361839ce4e327.png",
     "title": "三題噺",
     "description": [
       "This is iOS application"
