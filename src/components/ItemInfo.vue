@@ -3,9 +3,13 @@
     <div>
       <h1 class="item-info__title">{{ title }}</h1>
     </div>
-    <img
-      class="item-info__image" 
-      :src="thumbnail">
+    <a 
+      :href="url"
+      class="item-info__image">
+      <img
+        class="item-info__image__content" 
+        :src="thumbnail">
+    </a>
     <div class="item-info__description">
       <span
         :class="[this.page==0 ? 'item-info--hidden' : '']"
@@ -49,6 +53,11 @@
 export default {
   name: 'ItemLink',
   props: {
+    url: {
+      type: String,
+      required: false,
+      default: '#'
+    },
     thumbnail: {
       type: String,
       required: true
@@ -147,8 +156,16 @@ export default {
   align-items: center;
 
   &__image {
-    max-width: 70%; 
-    max-height: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+      max-width: 70%; 
+      max-height: 70%;
+    }
   }
 
   &__title {

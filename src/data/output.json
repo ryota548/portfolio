@@ -1,7 +1,7 @@
 [
   {
-    "toLink": "/",
-    "thumbnail": "../assets/group_detection.png",
+    "url": "https://www.youtube.com/watch?v=IYf4161_8WY&t=2s",
+    "thumbnail": "https://i.ytimg.com/vi/IYf4161_8WY/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAyJAFBdnzzGqKXnuCXw12L41kUdw",
     "title": "Web Engeneer Hiring Video",
     "description": [
       "My company's video"
@@ -9,8 +9,8 @@
     "tag": "presentation, job"
   },
   {
-    "toLink": "/",
-    "thumbnail": "../assets/group_detection.png",
+    "url": "https://ryota548.github.io/portfolio/#/",
+    "thumbnail": "../assets/ryotakoshiba.png",
     "title": "RYOTA KOSHIBA",
     "description": [
       "This is my homepage"
@@ -18,25 +18,17 @@
     "tag": "Coding, Hobby, Vue.js, HTML, CSS"
   },
   {
-    "toLink": "/",
-    "thumbnail": "../assets/group_detection.png",
-    "title": "寿司は左から食え",
-    "description": [
-      "This is my weblog"
-    ],
-    "tag": "Writing, Hooby"
-  },
-  {
-    "toLink": "/",
+    "url": "https://ieeexplore.ieee.org/document/7929695/",
     "thumbnail": "../assets/group_detection.png",
     "title": "Group Detection",
     "description": [
-      "This is my study with sensing of Android app"
+      "This is my study with sensing of Android app",
+      "Group Detection Based on User-to-User Distance in Everyday Life for Office Lunch Group Recommendation"
     ],
     "tag": "presentation, Writing, Coding, Java, Firebase, mobile sensing"
   },
   {
-    "toLink": "/",
+    "url": "#",
     "thumbnail": "../assets/group_detection.png",
     "title": "三題噺",
     "description": [

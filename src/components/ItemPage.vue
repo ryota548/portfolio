@@ -3,6 +3,7 @@
   <item-info 
     v-for="item in itemJson" 
     :key=item.id 
+    :url=item.url
     :thumbnail=item.thumbnail 
     :title=item.title 
     :description=item.description
