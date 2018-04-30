@@ -17,25 +17,23 @@
         @click="back">
         <
       </span>
-      <transition :name="animationName">
-        <div 
-          :style="{
-            'width': description.length * 100 + '%',
-            'transform': 'translateX(' + translateX + 'px)',
-            'transition-duration': transitionDuration + 'ms'
-            }"
-          class="item-info--carousel">
-          <div
-            v-for="(sentens, index) in description"
-            :key="index"
-            ref="carousel"
-            class="item-info__description__body"
-            @touchstart="onTouchStart"
-            @mousedown="onTouchStart">
-            {{ sentens }}
-          </div>
+      <div 
+        :style="{
+          'width': description.length * 100 + '%',
+          'transform': 'translateX(' + translateX + 'px)',
+          'transition-duration': transitionDuration + 'ms'
+          }"
+        class="item-info--carousel">
+        <div
+          v-for="(sentens, index) in description"
+          :key="index"
+          ref="carousel"
+          class="item-info__description__body"
+          @touchstart="onTouchStart"
+          @mousedown="onTouchStart">
+          {{ sentens }}
         </div>
-      </transition>
+      </div>
       <span 
         v-if="this.page!=this.description.length-1"
         class="item-info--btn"
@@ -77,12 +75,10 @@ export default {
   },
   data: function () {
     return {
-      animationName: 'next',
       delta: 0,
       itemWidth: 0,
       page: 0,
       startPosition: 'null',
-      transition_name: 'show-next',
       transitionDuration: 400
     }
   },

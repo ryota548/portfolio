@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Contents from '@/components/Contents.vue'
-import AboutMe from '@/components/AboutMe.vue'
-import Job from '@/components/Job.vue'
-import Output from '@/components/Output.vue'
+import ItemList from '@/components/organisms/ItemList.vue'
+import AboutMe from '@/data/aboutme.json'
+import Contents from '@/data/contents.json'
+import Output from '@/data/output.json'
 
 Vue.use(Router)
 
@@ -12,22 +12,29 @@ export default new Router({
     {
       path: '/',
       name: 'Contents',
-      component: Contents
+      component: ItemList,
+      props: {
+        isContents: true,
+        itemJson: Contents
+      }
     },
     {
       path: '/aboutme',
       name: 'AboutMe',
-      component: AboutMe
-    },
-    {
-      path: '/job',
-      name: 'Job',
-      component: Job
+      component: ItemList,
+      props: {
+        isContents: false,
+        itemJson: AboutMe
+      }
     },
     {
       path: '/output',
       name: 'Output',
-      component: Output
+      component: ItemList,
+      props: {
+        isContents: false,
+        itemJson: Output
+      }
     }
   ]
 })

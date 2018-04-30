@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import ItemLink from '@/components/ItemLink.vue'
+import ItemLink from '@/components/molecules/ItemLink.vue'
 import header from '@/data/header.json'
 export default {
   name: 'app',
