@@ -48,7 +48,7 @@ export default {
 .item-list {
   height: 100%;
   display: grid;
-  grid: auto-flow minmax(320px, 100%) / repeat(auto-fit, minmax(320px, 1fr));
+  grid: auto-flow minmax(300px, 100%) / repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1px;
 }
 

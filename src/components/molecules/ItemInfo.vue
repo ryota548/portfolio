@@ -130,10 +130,17 @@ export default {
     },
     revert () {
       this.delta = 0
+    },
+    handleResize () {
+      console.log(this.itemWidth = this.$refs.carousel[0].clientWidth)
     }
   },
   mounted () {
     this.itemWidth = this.$refs.carousel[0].clientWidth
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy () {
+    window.removeEventListener('resize', this.handleResize)
   }
 }
 </script>
