@@ -4,7 +4,8 @@
     "thumbnail": "https://i.ytimg.com/vi/IYf4161_8WY/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLAyJAFBdnzzGqKXnuCXw12L41kUdw",
     "title": "Web Engeneer Hiring Video",
     "description": [
-      "My company's video"
+      "19卒向けエンジニア職種説明会動画",
+      "緊張してガッチガチだよ"
     ],
     "tag": "presentation, job"
   },
@@ -13,7 +14,8 @@
     "thumbnail": "https://i.gyazo.com/94572da99f65d42218be3180a1ab91b4.png",
     "title": "RYOTA KOSHIBA",
     "description": [
-      "This is my homepage"
+      "今見ているホームページだよ",
+      "出来るだけ少ないコンポーネントで構成しているよ。"
     ],
     "tag": "Coding, Hobby, Vue.js, HTML, CSS"
   },
@@ -22,17 +24,19 @@
     "thumbnail": "https://i.gyazo.com/ebe7379e82558f9bb7b0f951cb71b6a7.png",
     "title": "Group Detection",
     "description": [
-      "This is my study with sensing of Android app",
-      "Group Detection Based on User-to-User Distance in Everyday Life for Office Lunch Group Recommendation"
+      "スマホ端末のBLEを利用したグループ検出の研究だよ。",
+      "アプリ作ったり国際発表したり色々したよ。",
+      "Group Detection Based on User-to-User Distance in Everyday Life for Office Lunch Group Recommendation、というタイトルで発表したよ"
     ],
-    "tag": "presentation, Writing, Coding, Java, Firebase, mobile sensing"
+    "tag": "presentation, Writing, Coding, Java, Firebase"
   },
   {
     "url": "#",
     "thumbnail": "https://i.gyazo.com/060da51f749de8612b7361839ce4e327.png",
     "title": "三題噺",
     "description": [
-      "This is iOS application"
+      "初めて作ったiOSアプリだよ",
+      "AppStoreにリリースしたけど、開発者プログラムのお金払ってないのでもうStoreには無いよ。"
     ],
     "tag": "Coding, Hobby, Objective-C"
   }

@@ -202,7 +202,12 @@ export default {
   }
 
   &--btn {
+    display: flex;
+    background: white;
     z-index: 1;
+    height: 100%;
+    justify-content:center; 
+    align-items: center;
   }
 }
 </style>

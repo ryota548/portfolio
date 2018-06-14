@@ -5,7 +5,7 @@
     "title": "4.2018 ~ Now",
     "description": [
       "Webapplication Engineer",
-      "video streaming department"
+      "動画配信事業部でフロントエンドやログ収集基盤の開発してるよ。"
     ],
     "tag": "now, employee"
   },
@@ -14,7 +14,7 @@
     "thumbnail": "https://www.asahicom.jp/articles/images/AS20170622004426_commL.jpg",
     "title": "3.2018 ~ Now",
     "description": [
-      "live in"
+      "住んでるなう。いい街。"
     ],
     "tag": "now, citizen"
   },
@@ -23,8 +23,8 @@
     "thumbnail": "http://www.naist.jp/about/img/logomark_R.jpg",
     "title": "4.2015 ~ 3.2017",
     "description": [
-      "Ubiquitous Computing Systems Lab.",
-      "Division of Infomation Science"
+      "ユビキタスコンピューティングシステム研",
+      "優秀な仲間たちに囲まれて最高でした"
     ],
     "tag": "past, student"
   },
@@ -34,7 +34,7 @@
     "title": "5.2014 ~ 3.2017",
     "description": [
       "Mentor",
-      "programming education for students"
+      "中高生にプログラミング教えてたよ"
     ],
     "tag": "past, part-time job"
   },
@@ -43,7 +43,7 @@
     "thumbnail": "http://154450.com/doushisya/images/dlogo.jpg",
     "title": "4.2011 ~ 3.2015",
     "description": [
-      "Ultrasonic Electronics Lab.",
+      "Ultrasonic Electronics Lab.（超音波研）",
       "Faculty of Science and Engineering"
     ],
     "tag": "past, student"
@@ -53,16 +53,18 @@
     "thumbnail": "http://uenomiya.com/wp-content/uploads/2017/07/ug_logo_new-300x50.png",
     "title": "4.2008 ~ 3.2011",
     "description": [
-      "High School Student"
+      "High School Student",
+      "6年間の男子校生活は人生の糧になっているよ。"
     ],
     "tag": "past, student"
   },
   {
     "toLink": "/",
-    "thumbnail": "https://www.city.higashiosaka.lg.jp/cmsfiles/contents/0000014/14043/ragbynomachi_blue(1024-768).png",
+    "thumbnail": "https://www.city.higashiosaka.lg.jp/cmsfiles/contents/0000006/6271/trykun.gif",
     "title": "8.1992 ~ 3.2017",
     "description": [
-      "my home town"
+      "東大阪。地元。中小企業の街",
+      "最近はラグビーとカレーパン推しがすごい"
     ],
     "tag": "past, citizen"
   }

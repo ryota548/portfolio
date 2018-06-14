@@ -33,11 +33,8 @@ export default {
 </script>
 
 <style lang="scss">
-
-@font-face {
-  font-family: 'zurich';
-  src: url(./assets/zurich.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+@import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css);
 $header-height: 45px;
 
 .top {
@@ -51,7 +48,7 @@ $header-height: 45px;
 
   text-align: center;
   font-size: 12px;
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: 'Ropa Sans','Rounded Mplus 1c',sans-serif;
   letter-spacing: .05em;
 
   &__header.item-link { 
@@ -65,7 +62,7 @@ $header-height: 45px;
       transform: translateY(-50%);
 
       font-size: 22px;
-      font-family: zurich;
+      font-family: 'Ropa Sans','Rounded Mplus 1c',sans-serif;
       font-weight: bold;
       letter-spacing: .1em;
     }
